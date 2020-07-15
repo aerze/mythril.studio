@@ -98,7 +98,7 @@ const Home = () => (
       .placard {
         margin-top: auto;
         position: sticky;
-        bottom: 2rem;
+        bottom: 5rem;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
