@@ -1,0 +1,23 @@
+.container {
+  height: 100vh;
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.subtitle {
+  margin: 10px auto 10px 0;
+}
+
+.placard {
+  margin-top: 96px;
+}

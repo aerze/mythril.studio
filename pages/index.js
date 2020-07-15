@@ -1,150 +1,40 @@
-import Head from "next/head";
+import Title from "../components/title/title";
+import Subtitle from "../components/subtitle/subtitle";
+import Caption from "../components/caption/caption";
+import Placard from "../components/placard/placard";
+import styles from "./index.module.scss";
 
-const Home = () => (
-  <React.Fragment>
-    <Head>
-      <meta
-        name="viewport"
-        content="width=device-width, minimum-scale=1.0, user-scalable=yes"
-      />
-      <title>The Web.Gallery - Main Entrance</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
+export default function Home() {
+  return (
+    <React.Fragment>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <Subtitle className={styles.subtitle}>WELCOME TO</Subtitle>
+          <Title>The Web</Title>
+          <Title>.Gallery</Title>
+        </header>
+        <main>
+          <Caption>
+            A curated space dedicated to art made possible by the web.
+          </Caption>
+        </main>
 
-    <div className="container">
-      <header>
-        <h2 className=" subtitle">WELCOME TO</h2>
-        <h1 className=" title">The Web</h1>
-        <h1 className=" title">.Gallery</h1>
-      </header>
-      <main>
-        <p className="description">
-          A curated space dedicated to art made possible by the web.
-        </p>
-      </main>
-
-      <div className="placard">
-        <h4 className="placard-title">LATEST UPDATE:</h4>
-        <p className="placard-body">
+        <Placard className={styles.placard} title="LATEST UPDATE:">
           We are currently searching for artists to exhibit. If you would like
-          your art displayed here, let us know through Twitter.{" "}
+          your art displayed here, let us know through Twitter{" "}
           <a href="https://twitter.com/theweb_gallery">
             <strong>@theweb_gallery</strong>
           </a>
-        </p>
+        </Placard>
+
+        {/* <Placard title="HOW TO NAVIGATE:">
+        Simply <strong>scroll down</strong> to begin browsing through "The Web".
+        <br />
+        Our Gallery is organized using a <strong>tag system</strong> you can use
+        to make your own way through or just <strong>scroll down</strong> to
+        begin browsing.
+      </Placard> */}
       </div>
-
-      {/* <div className="placard">
-        <h4 className="placard-title">HOW TO NAVIGATE:</h4>
-        <p className="placard-body">
-          Simply <strong>scroll down</strong> to begin browsing through "The
-          Web".
-
-          Our Gallery is organized using a <strong>tag system</strong> you can
-          use to make your own way through or just <strong>scroll down</strong>{" "}
-          to begin browsing.
-        </p>
-      </div> */}
-    </div>
-    <style jsx>{`
-      .container {
-        height: 100vh;
-        max-width: 400px;
-
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-      }
-
-      header {
-        margin-bottom: 16px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-      }
-
-      .subtitle {
-        margin: 10px auto 10px 0;
-        display: inline-block;
-        padding: 4px 10px;
-
-        background: black;
-        color: white;
-
-        font-size: 12px;
-        font-weight: 700;
-      }
-
-      .title {
-        margin: 0;
-        font-family: "Playfair Display", serif;
-        font-size: 3rem;
-        font-weight: 300;
-        line-height: 3rem;
-      }
-
-      .description {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 1.2;
-      }
-
-      .placard {
-        margin-top: 160px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .placard-title {
-        margin: 0;
-        display: inline-block;
-        padding: 4px 10px;
-        background: black;
-        color: white;
-        font-size: 12px;
-        font-weight: 700;
-      }
-
-      .placard-body {
-        border: 2px solid black;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        margin: 0;
-        padding: 1em;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 1.5;
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
-          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-          Helvetica Neue, sans-serif;
-        max-height: 100vh;
-      }
-
-      #__next {
-        max-height: 100vh;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </React.Fragment>
-);
-
-export default Home;
+    </React.Fragment>
+  );
+}
