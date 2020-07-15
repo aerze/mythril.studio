@@ -84,7 +84,7 @@ const Home = () => (
       }
 
       .placard {
-        margin-top: auto;
+        margin-top: 10rem;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
