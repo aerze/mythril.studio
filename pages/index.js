@@ -1,186 +1,115 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 const Home = () => (
-  <div className="container">
+  <React.Fragment>
     <Head>
-      <title>Create Next App</title>
+      <meta
+        name="viewport"
+        content="width=device-width, minimum-scale=1.0, user-scalable=yes"
+      />
+      <title>The Web.Gallery - Main Entrance</title>
       <link rel="icon" href="/favicon.ico" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
     </Head>
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+    <div className="container">
+      <header>
+        <h2 className=" subtitle">WELCOME TO</h2>
+        <h1 className=" title">The Web</h1>
+        <h1 className=" title">.Gallery</h1>
+      </header>
+      <main>
+        <p className="description">
+          A curated space dedicated to art made possible by the web.
+        </p>
+      </main>
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
+      <div className="placard">
+        <h4 className="placard-title">HOW TO NAVIGATE:</h4>
+        <p className="placard-body">
+          Simply <strong>scroll down</strong> to begin browsing through "The
+          Web".
+          {/* Our Gallery is organized using a <strong>tag system</strong> you can
+          use to make your own way through or just <strong>scroll down</strong>{" "}
+          to begin browsing. */}
+        </p>
       </div>
-    </main>
-
-    <footer>
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" />
-      </a>
-    </footer>
-
+    </div>
     <style jsx>{`
       .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
+        height: 100vh;
+        max-width: 400px;
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 2rem;
       }
 
-      main {
-        padding: 5rem 0;
-        flex: 1;
+      header {
+        margin-bottom: 16px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
       }
 
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      .subtitle {
+        margin: 10px auto 10px 0;
+        display: inline-block;
+        padding: 4px 10px;
 
-      footer img {
-        margin-left: 0.5rem;
-      }
+        background: black;
+        color: white;
 
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 700;
       }
 
       .title {
         margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 3rem;
       }
 
       .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
         margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
+        font-family: "Open Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.2;
       }
 
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
+      .placard {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .placard-title {
+        margin: 0;
+        display: inline-block;
+        padding: 4px 10px;
+        background: black;
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .placard-body {
+        border: 2px solid black;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin: 0;
+        padding: 1em;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
       }
     `}</style>
 
@@ -189,15 +118,16 @@ const Home = () => (
       body {
         padding: 0;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
+          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+          Helvetica Neue, sans-serif;
       }
 
       * {
         box-sizing: border-box;
       }
     `}</style>
-  </div>
-)
+  </React.Fragment>
+);
 
-export default Home
+export default Home;
