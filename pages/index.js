@@ -28,15 +28,27 @@ const Home = () => (
       </main>
 
       <div className="placard">
+        <h4 className="placard-title">LATEST UPDATE:</h4>
+        <p className="placard-body">
+          We are currently searching for artists to exhibit. If you would like
+          your art displayed here, let us know through Twitter.
+          <a href="https://twitter.com/theweb_gallery">
+            <strong> @theweb_gallery </strong>
+          </a>
+        </p>
+      </div>
+
+      {/* <div className="placard">
         <h4 className="placard-title">HOW TO NAVIGATE:</h4>
         <p className="placard-body">
           Simply <strong>scroll down</strong> to begin browsing through "The
           Web".
-          {/* Our Gallery is organized using a <strong>tag system</strong> you can
+
+          Our Gallery is organized using a <strong>tag system</strong> you can
           use to make your own way through or just <strong>scroll down</strong>{" "}
-          to begin browsing. */}
+          to begin browsing.
         </p>
-      </div>
+      </div> */}
     </div>
     <style jsx>{`
       .container {
@@ -84,7 +96,9 @@ const Home = () => (
       }
 
       .placard {
-        margin-top: 10rem;
+        margin-top: auto;
+        position: sticky;
+        bottom: 2rem;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -121,6 +135,11 @@ const Home = () => (
         font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
           Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
           Helvetica Neue, sans-serif;
+        max-height: 100vh;
+      }
+
+      #__next {
+        max-height: 100vh;
       }
 
       * {
