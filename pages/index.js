@@ -31,9 +31,9 @@ const Home = () => (
         <h4 className="placard-title">LATEST UPDATE:</h4>
         <p className="placard-body">
           We are currently searching for artists to exhibit. If you would like
-          your art displayed here, let us know through Twitter.
+          your art displayed here, let us know through Twitter.{" "}
           <a href="https://twitter.com/theweb_gallery">
-            <strong> @theweb_gallery </strong>
+            <strong>@theweb_gallery</strong>
           </a>
         </p>
       </div>
@@ -96,9 +96,7 @@ const Home = () => (
       }
 
       .placard {
-        margin-top: auto;
-        position: sticky;
-        bottom: 2rem;
+        margin-top: 160px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
